@@ -171,8 +171,7 @@
     var gameOver= false;
     function check(position)
     {
-        let id = ids[position];
-        
+        let id = ids[position];       
         if(gameOver==true)
         {
             return;
@@ -185,7 +184,6 @@
             locations++;
             document.getElementById("locations").innerText = `locations:`+locations;
             document.getElementById("score").innerText = `score:`+score;
-
         }
         else if (position==monsterLocation) {
             img.src = "monster.jpg";
@@ -194,8 +192,7 @@
             locations++;
             document.getElementById("locations").innerText = `locations:`+ locations;
             document.getElementById("score").innerText =`score:`+  score;
-            }
-        
+            }        
         else{
             img.src="coin.jpg";
             score+=1;
@@ -203,16 +200,12 @@
             document.getElementById("locations").innerText =`locations:`+ locations; 
             document.getElementById("score").innerText = `score:`+ score;
         }
-
-        lastLocation = position;
-            
+        lastLocation = position;          
         }
         function help()
-        {
-            
+        {      
             var col= lastLocation%5;
             var row= Math.floor(lastLocation/5);
-            
             const kinshipLocations = [lastLocation-1,lastLocation+1,lastLocation-5,lastLocation+5];
             for(const kinship of kinshipLocations)
             {
@@ -222,10 +215,7 @@
                 document.getElementById("help").innerHTML="So close";
                 return;
             }
-
-            }
-            
-
+        }
             var monsterRow = Math.floor(monsterLocation / 5);
             var monsterCol = monsterLocation % 5;
             if (row - monsterRow< 1 && col - monsterCol < 1) {
@@ -236,9 +226,6 @@
                 document.getElementById("help").innerHTML="All clear";
             }
             document.getElementById("help").onclick = help;
-           
-
-
         }         
       
    </script>
