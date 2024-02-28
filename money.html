@@ -56,14 +56,24 @@
     background-color:palegoldenrod;
     margin-left: 80px;
     padding-left: 20px;
-
   }
   .row {
-      display: flex;  flex-direction:row;
-  }
-  .row > div {
-  margin: 10px;
-}
+            display: flex;
+        }
+
+        .Location {
+            width: 100px; 
+            height: 80px; 
+            margin: 5px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+
+        .Location img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     </style>
 </head>
 
@@ -85,68 +95,152 @@
             <p>Score is zero.</p>
         </div>
         <div>
-            <p class="click">Click for help.</p>
+            <p class="click"><button onclick="help()">Click for help.</button></p>
         </div>
         <div id="help">
             <p>Help report</p>
         </div>
+        <div>
+    </div>
     </div>
     <div class="row">
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="600" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="600" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="600" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="600" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="600" height="100"></div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image01" onclick=check(0)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image02" onclick=check(1)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image03" onclick=check(2)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image04" onclick=check(3)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image05" onclick=check(4)></div>
     </div>
     <br>
     <div class="row">
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image06" onclick=check(5)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image07" onclick=check(6)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image08" onclick=check(7)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image09" onclick=check(8)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image10" onclick=check(9)></div>
     </div>
     <br>
     <div class="row">
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image11" onclick=check(10)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image12" onclick=check(11)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image13" onclick=check(12)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image14" onclick=check(13)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image15" onclick=check(14)></div>
     </div>
     <br>
     <div class="row">
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image16" onclick=check(15)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image17" onclick=check(16)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image18" onclick=check(17)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image19" onclick=check(18)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image20" onclick=check(19)></div>
     </div>
     <br>
     <div class="row">
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image21" onclick=check(20)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image22" onclick=check(21)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image23" onclick=check(22)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image24" onclick=check(23)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image25" onclick=check(24)></div>
     </div>
     <br>
     <div class="row">
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
-        <div class="col-sm-2"><img src="buildingg.jpg" alt="buliding" widhth="100" height="100"></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image26" onclick=check(25)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image27" onclick=check(26)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image28" onclick=check(27)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image29" onclick=check(28)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image30" onclick=check(29)></div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image31" onclick=check(30)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image32" onclick=check(31)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image33" onclick=check(32)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image34" onclick=check(33)></div>
+        <div class="Location"><img src="buildingg.jpg" alt="building" id="image35" onclick=check(34)></div>
     </div>
 
-   
+    <script>
+        var ids=["image01","image02","image03","image04","image05","image06","image07","image08",
+                 "image09","image10","image11","image12","image13","image14","image15","image16",
+                 "image17","image18","image19","image20","image21","image22","image23","image24"]
+                 var score =0;
+    var locations =0;
+    var lastLocation =0;
+    var fancyCoinLocations = [2, 5, 14, 19, 23, 33];
+    var monsterLocation =20;
+    var gameOver= false;
+    function check(position)
+    {
+        let id = ids[position];
+        
+        if(gameOver==true)
+        {
+            return;
+        }
+        var img = document.getElementById(id);
+        if(fancyCoinLocations.includes(position))
+        {
+            img.src="fancycoin.jpg";
+            score+=3;
+            locations++;
+            document.getElementById("locations").innerText = `locations:`+locations;
+            document.getElementById("score").innerText = `score:`+score;
+
+        }
+        else if (position==monsterLocation) {
+            img.src = "monster.jpg";
+            gameOver = true; 
+            score -= 5;
+            locations++;
+            document.getElementById("locations").innerText = `locations:`+ locations;
+            document.getElementById("score").innerText =`score:`+  score;
+            }
+        
+        else{
+            img.src="coin.jpg";
+            score+=1;
+            locations++;
+            document.getElementById("locations").innerText =`locations:`+ locations; 
+            document.getElementById("score").innerText = `score:`+ score;
+        }
+
+        lastLocation = position;
+            
+        }
+        function help()
+        {
+            
+            var col= lastLocation%5;
+            var row= Math.floor(lastLocation/5);
+            
+            const kinshipLocations = [lastLocation-1,lastLocation+1,lastLocation-5,lastLocation+5];
+            for(const kinship of kinshipLocations)
+            {
+                const adjustedLoc = (kinship+35)%35;
+                if(fancyCoinLocations.includes(adjustedLoc))
+            {
+                document.getElementById("help").innerHTML="So close";
+                return;
+            }
+
+            }
+            
+
+            var monsterRow = Math.floor(monsterLocation / 5);
+            var monsterCol = monsterLocation % 5;
+            if (row - monsterRow< 1 && col - monsterCol < 1) {
+              document.getElementById("help").innerHTML="Grr";
+            }
+            else
+            {
+                document.getElementById("help").innerHTML="All clear";
+            }
+            document.getElementById("help").onclick = help;
+           
+
+
+        }         
+      
+   </script>
 </body>
 </html>
