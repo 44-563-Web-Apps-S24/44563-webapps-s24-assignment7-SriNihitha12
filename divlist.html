@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>divlist HTML</title>
+	<style>
+		.flex-container {
+			display: flex;
+			flex-direction: row;
+			background-color: rgb(196, 54, 134);
+		}
+
+		.flex-container>div {
+			background-color: #d7f13f;
+			margin: 10px;
+			padding: 20px;
+			font-size: 30px;
+		}
+
+		@media (max-width: 600px) {
+			.flex-container {
+				flex-direction: column;
+				background-color: rgb(30, 116, 113);
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<header>
+			<h1 class="text text-primary" style="text-align: center">Sri Nihitha Mandadi list with divs</h1>
+		  </header>
+		<input type="text" id="text">
+		<button onclick="makeNewDiv()" >Add End</button>
+		<button onclick="addFront()" >Add Front</button>
+		<button onclick="remove()" >Remove</button>
+		<div class="flex-container" id="target">
+			<div class="divlist">First item</div>
+			<div class="divlist">Second item</div>
+			<div class="divlist">Third item</div>
+		</div>
+	</div>
+
+	<script>
+		function makeNewDiv() {
+			let element = document.createElement("div")
+			element.innerHTML = document.getElementById('text').value
+			element.style.color = "orange"
+			let container = document.getElementById('target')
+			element.setAttribute("class", " divlist")
+			container.appendChild(element)
+		}
+
+		function remove() {
+			let divListItems = document.getElementsByClassName('divlist');
+			let length = divListItems.length;
+			if (length > 0) {
+				let middleItem = Math.floor(length / 2);
+				divListItems[middleItem].remove();
+			}
+		}
+
+		function addFront() {
+			let element = document.createElement("div")
+			element.innerHTML = document.getElementById('text').value
+			element.style.color = "orange"
+			let container = document.getElementById('target')
+			element.setAttribute("class", " divlist")
+			container.insertBefore(element, container.firstChild);
+		}
+
+	</script>
+
+</body>
+
+</html>
