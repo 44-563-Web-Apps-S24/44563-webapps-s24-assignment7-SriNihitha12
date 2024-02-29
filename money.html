@@ -1,69 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money HTML</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" 
-    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
 
-  <style>
+    <style>
+        #instructions {
+            color: darkorange;
+            font-size: 25px;
+            font-family: cursive;
+            font-weight: bold;
+            background-color: bisque;
+            padding-left: 20px;
+        }
 
- #instructions{
-    color:darkorange ;
-    font-size:25px;
-    font-family:cursive;
-    font-weight: bold;
-    background-color: bisque;
-    padding-left: 20px;
-  }
-  #locations{
-    color:blueviolet ;
-    font-size: 20px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-    margin-left: 20px;
-    padding-left: 20px;
-    background-color:lightblue;
+        #locations {
+            color: blueviolet;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 20px;
+            padding-left: 20px;
+            background-color: lightblue;
 
-  }
-  #score{
-    color:crimson;
-    font-size:20px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-left: 40px;
-    padding-left: 20px;
-    background-color:lightpink;
-  }
-  p.click{
-    color:forestgreen;
-    font-size:20px;
-    font-family:Arial, Helvetica, sans-serif;
-    margin-left: 60px;
-    padding-left: 20px;
-    background-color:darkseagreen;
-    
+        }
 
-  }
-  #help{
-    color:darkgoldenrod;
-    font-size:20px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color:palegoldenrod;
-    margin-left: 80px;
-    padding-left: 20px;
-  }
-  .row {
+        #score {
+            color: crimson;
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-left: 40px;
+            padding-left: 20px;
+            background-color: lightpink;
+        }
+
+        p.click {
+            color: forestgreen;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 60px;
+            padding-left: 20px;
+            background-color: darkseagreen;
+
+
+        }
+
+        #help {
+            color: darkgoldenrod;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: palegoldenrod;
+            margin-left: 80px;
+            padding-left: 20px;
+        }
+
+        .row {
             display: flex;
         }
 
         .Location {
-            width: 100px; 
-            height: 80px; 
+            width: 100px;
+            height: 80px;
             margin: 5px;
             border: 1px solid #ccc;
             overflow: hidden;
@@ -79,9 +86,9 @@
 
 <body>
 
-<header>
+    <header>
         <h1 class="text text-primary" style="text-align: center">Find the coins by Sri Nihitha</h1>
-</header>
+    </header>
 
     <div class="container">
 
@@ -100,9 +107,9 @@
         <div id="help">
             <p>Help report</p>
         </div>
-        <div>
+        <button type="button" class="btn btn-info" onclick="newGame()"> New Game</button>
     </div>
-    </div>
+
     <div class="row">
         <div class="Location"><img src="buildingg.jpg" alt="building" id="image01" onclick=check(0)></div>
         <div class="Location"><img src="buildingg.jpg" alt="building" id="image02" onclick=check(1)></div>
@@ -160,73 +167,93 @@
     </div>
 
     <script>
-        var ids=["image01","image02","image03","image04","image05","image06","image07","image08",
-                 "image09","image10","image11","image12","image13","image14","image15","image16",
-                 "image17","image18","image19","image20","image21","image22","image23","image24"]
-                 var score =0;
-    var locations =0;
-    var lastLocation =0;
-    var fancyCoinLocations = [2, 5, 14, 19, 23, 33];
-    var monsterLocation =20;
-    var gameOver= false;
-    function check(position)
-    {
-        let id = ids[position];       
-        if(gameOver==true)
-        {
-            return;
-        }
-        var img = document.getElementById(id);
-        if(fancyCoinLocations.includes(position))
-        {
-            img.src="fancycoin.jpg";
-            score+=3;
-            locations++;
-            document.getElementById("locations").innerText = `locations:`+locations;
-            document.getElementById("score").innerText = `score:`+score;
-        }
-        else if (position==monsterLocation) {
-            img.src = "monster.jpg";
-            gameOver = true; 
-            score -= 5;
-            locations++;
-            document.getElementById("locations").innerText = `locations:`+ locations;
-            document.getElementById("score").innerText =`score:`+  score;
-            }        
-        else{
-            img.src="coin.jpg";
-            score+=1;
-            locations++;
-            document.getElementById("locations").innerText =`locations:`+ locations; 
-            document.getElementById("score").innerText = `score:`+ score;
-        }
-        lastLocation = position;          
-        }
-        function help()
-        {      
-            var col= lastLocation%5;
-            var row= Math.floor(lastLocation/5);
-            const kinshipLocations = [lastLocation-1,lastLocation+1,lastLocation-5,lastLocation+5];
-            for(const kinship of kinshipLocations)
-            {
-                const adjustedLoc = (kinship+35)%35;
-                if(fancyCoinLocations.includes(adjustedLoc))
-            {
-                document.getElementById("help").innerHTML="So close";
+        var ids = ["image01", "image02", "image03", "image04", "image05", "image06", "image07", "image08",
+            "image09", "image10", "image11", "image12", "image13", "image14", "image15", "image16",
+            "image17", "image18", "image19", "image20", "image21", "image22", "image23", "image24","image25",
+            "image26","image27","image28","image29","image30","image31","image32","image33","image34","image35"]
+        var score = 0;
+        var locations = 0;
+        var lastLocation = 0;
+        var fancyCoinLocations = [2, 5, 14, 19, 23, 33];
+        var monsterLocation = 20;
+        var gameOver = false;
+        function check(position) {
+            let id = ids[position];
+            if (gameOver == true) {
                 return;
             }
+            var img = document.getElementById(id);
+            if (fancyCoinLocations.includes(position)) {
+                img.src = "fancycoin.jpg";
+                score += 3;
+                locations++;
+                document.getElementById("locations").innerText = `locations:` + locations;
+                document.getElementById("score").innerText = `score:` + score;
+            }
+            else if (position == monsterLocation) {
+                img.src = "monster.jpg";
+                gameOver = true;
+                score -= 5;
+                locations++;
+                document.getElementById("locations").innerText = `locations:` + locations;
+                document.getElementById("score").innerText = `score:` + score;
+            }
+            else {
+                img.src = "coin.jpg";
+                score += 1;
+                locations++;
+                document.getElementById("locations").innerText = `locations:` + locations;
+                document.getElementById("score").innerText = `score:` + score;
+            }
+            lastLocation = position;
         }
+        function help() {
+            var col = lastLocation % 5;
+            var row = Math.floor(lastLocation / 5);
+            const kinshipLocations = [lastLocation - 1, lastLocation + 1, lastLocation - 5, lastLocation + 5];
+            for (const kinship of kinshipLocations) {
+                const adjustedLoc = (kinship + 35) % 35;
+                if (fancyCoinLocations.includes(adjustedLoc)) {
+                    document.getElementById("help").innerHTML = "So close";
+                    return;
+                }
+            }
             var monsterRow = Math.floor(monsterLocation / 5);
             var monsterCol = monsterLocation % 5;
-            if (row - monsterRow< 1 && col - monsterCol < 1) {
-              document.getElementById("help").innerHTML="Grr";
+            if (row - monsterRow < 1 && col - monsterCol < 1) {
+                document.getElementById("help").innerHTML = "Grr";
             }
-            else
-            {
-                document.getElementById("help").innerHTML="All clear";
+            else {
+                document.getElementById("help").innerHTML = "All clear";
             }
             document.getElementById("help").onclick = help;
-        }         
-   </script>
+        }
+        function newGame() {
+            fancyCoinLocations = [];
+            for (var i = 0; i < 6; i++) {
+                var randomPosition = Math.floor(Math.random() * 35);
+                if(!fancyCoinLocations.includes(randomPosition) && randomPosition !== monsterLocation) {
+                    fancyCoinLocations.push(randomPosition);
+                }
+            }
+            monsterLocation = Math.floor(Math.random() * 35);
+            score = 0;
+            locations = 0;
+            lastLocation = 0;
+            gameOver = false;
+            console.out
+
+            document.getElementById("locations").innerText = "Locations: " + locations;
+            document.getElementById("score").innerText = "Score: " + score;
+
+            console.log("Fancy Coin Locations:", fancyCoinLocations);
+            console.log("Monster Location:", monsterLocation);
+            for (var i = 0; i < 35; i++) {
+                document.getElementById(ids[i]).src = "buildingg.jpg";
+            }
+            document.getElementById("help").innerHTML = "Help report";
+        }   
+    </script>
 </body>
+
 </html>

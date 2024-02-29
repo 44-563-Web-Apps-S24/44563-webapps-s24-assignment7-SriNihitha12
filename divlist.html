@@ -26,7 +26,6 @@
 	</style>
 </head>
 <body>
-
 	<div class="container">
 		<header>
 			<h1 class="text text-primary" style="text-align: center">Sri Nihitha Mandadi list with divs</h1>
@@ -35,6 +34,9 @@
 		<button onclick="makeNewDiv()" >Add End</button>
 		<button onclick="addFront()" >Add Front</button>
 		<button onclick="remove()" >Remove</button>
+		<button onclick="swapElements()" style="background-color: rgb(104, 126, 217); color: aliceblue;">Swap</button>
+
+
 		<div class="flex-container" id="target">
 			<div class="divlist">First item</div>
 			<div class="divlist">Second item</div>
@@ -69,6 +71,20 @@
 			element.setAttribute("class", " divlist")
 			container.insertBefore(element, container.firstChild);
 		}
+		function swapElements() {
+            let divListItems = document.getElementsByClassName('divlist');
+            let length = divListItems.length;
+
+            if (length >= 2) {
+                let index1 = Math.floor(Math.random() * length);
+                let index2 = Math.floor(Math.random() * (length - 1));
+                index2 = (index2 >= index1) ? index2 + 1 : index2;
+
+                let temp = divListItems[index1].cloneNode(true);
+                divListItems[index1].replaceWith(divListItems[index2].cloneNode(true));
+                divListItems[index2].replaceWith(temp);
+            }
+        }
 
 	</script>
 
